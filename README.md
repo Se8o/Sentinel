@@ -1,8 +1,8 @@
-# 🛡️ Sentinel - Infrastructure Health Monitor
+# Sentinel - Infrastructure Health Monitor
 
 A robust, production-ready service for monitoring endpoint availability with real-time metrics, alerting, and historical data tracking.
 
-## 🎯 Features
+## Features
 
 - **Async Health Checking** - Parallel monitoring of multiple endpoints
 - **REST API** - Full CRUD operations for monitor management
@@ -12,7 +12,7 @@ A robust, production-ready service for monitoring endpoint availability with rea
 - **Docker Ready** - Fully containerized with Docker Compose
 - **CI/CD Pipeline** - Automated testing and quality checks
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────┐         ┌──────────────┐         ┌─────────────┐
@@ -28,7 +28,7 @@ A robust, production-ready service for monitoring endpoint availability with rea
 └─────────────┘                                  └─────────────┘
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -72,7 +72,7 @@ A robust, production-ready service for monitoring endpoint availability with rea
    - Docs: http://localhost:8000/docs
    - Metrics: http://localhost:8000/metrics
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 sentinel/
@@ -90,7 +90,7 @@ sentinel/
 └── docker-compose.yml       # Container orchestration
 ```
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run all tests
@@ -103,7 +103,7 @@ poetry run pytest --cov=app --cov-report=html
 poetry run pytest tests/unit/test_checker.py
 ```
 
-## 🔧 Development
+## Development
 
 ### Code Quality
 
@@ -131,7 +131,7 @@ poetry run alembic upgrade head
 poetry run alembic downgrade -1
 ```
 
-## 📊 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -144,14 +144,14 @@ poetry run alembic downgrade -1
 | DELETE | `/api/v1/monitors/{id}` | Delete monitor |
 | GET | `/api/v1/monitors/{id}/history` | Get check history |
 
-## 🔐 Security
+## Security
 
 - API Key authentication (configurable)
 - Input validation with Pydantic
 - Rate limiting on sensitive endpoints
 - Docker secrets support for production
 
-## 📈 Monitoring
+## Monitoring
 
 The service exposes Prometheus metrics at `/metrics`:
 
@@ -159,7 +159,7 @@ The service exposes Prometheus metrics at `/metrics`:
 - `sentinel_latency_seconds` - Response time histogram
 - `sentinel_monitors_up` - Current number of UP monitors
 
-## 🚢 Deployment
+## Deployment
 
 ### Docker Compose (Production)
 
@@ -171,11 +171,11 @@ docker-compose -f docker-compose.prod.yml up -d
 
 See `.env.example` for all available configuration options.
 
-## 📝 License
+## License
 
 MIT License - See LICENSE file for details
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -183,6 +183,6 @@ MIT License - See LICENSE file for details
 4. Run tests and linting
 5. Submit a pull request
 
-## 📧 Contact
+## Contact
 
 Sebastian Lodin - [GitHub](https://github.com/Se8o)
