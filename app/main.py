@@ -28,13 +28,13 @@ logger = structlog.get_logger()
 async def lifespan(app: FastAPI):
     """Application lifespan manager for startup and shutdown events."""
     logger.info("application_startup", environment=get_settings().environment)
-    
+
     # TODO: Initialize database
     # TODO: Run migrations
     # TODO: Seed default monitors
-    
+
     yield
-    
+
     logger.info("application_shutdown")
     # TODO: Close database connections
     # TODO: Cleanup resources
@@ -59,7 +59,7 @@ app.add_middleware(
 
 if settings.enable_metrics:
     from prometheus_fastapi_instrumentator import Instrumentator
-    
+
     Instrumentator().instrument(app).expose(app)
 
 
@@ -81,7 +81,7 @@ async def health_check():
 
 if __name__ == "__main__":
     import uvicorn
-    
+
     uvicorn.run(
         "app.main:app",
         host=settings.api_host,
